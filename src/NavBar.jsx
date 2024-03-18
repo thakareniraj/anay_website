@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import ContactUs from "./ContactUs";
 
 export default function NavBar() {
@@ -46,25 +47,30 @@ export default function NavBar() {
               isOpen ? "block" : "hidden"
             } lg:space-x-4 lg:mt-0 mt-4 flex flex-col items-center text-xl`}
           >
-            <a href="/" className="text-white px-4 py-2 hover:text-orange-600 ">
+            <NavLink
+              to="/"
+              className="text-white px-4 py-2 hover:text-orange-600 "
+            >
               Home
-            </a>
-            <a
-              href="#Projects"
+            </NavLink>
+            <NavLink
+              to="#Projects"
               className="text-white px-4 py-2 hover:text-orange-600"
             >
               Projects
-            </a>
-            <a href="/" className="text-white px-4 py-2 hover:text-orange-600">
-              About
-            </a>
-            <a
-              href="/ContactUs"
+            </NavLink>
+            <NavLink
+              to="/"
               className="text-white px-4 py-2 hover:text-orange-600"
-              onClick={() => ContactUs()}
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/ContactUs"
+              className="text-white px-4 py-2 hover:text-orange-600"
             >
               Contact Me
-            </a>
+            </NavLink>
           </div>
         </div>
       </nav>
